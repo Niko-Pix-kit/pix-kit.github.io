@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://pix-kit.com/privacy/pix-blueprint.html" />
   <title>Pix-Moments Privacy Policy</title>
-  <meta name="description" content="How Pix-Moments stores your moments, photos, milestones, widgets and backups on your Android device." />
+  <meta name="description" content="How Pix-Moments handles local data and optional Google Drive synchronization." />
   <link rel="canonical" href="https://pix-kit.com/privacy/pix-moments.html" />
   <link rel="icon" type="image/png" href="/assets/pix-kit-logo-symbol.png" />
   <link rel="apple-touch-icon" href="/assets/pix-kit-logo-symbol.png" />
@@ -87,6 +86,7 @@
       font-weight: 900;
     }
     .brand-app-icon {
+      background: #fffbf7;
       width: 82px;
       height: 82px;
       border-radius: 22px;
@@ -176,9 +176,9 @@
       </div>
       <div class="badge"><span class="mark"></span>Pix-Kit · Pix-Moments</div>
       <h1>Pix-Moments Privacy Policy</h1>
-      <p class="subtitle">Pix-Moments keeps track of days since, countdowns, deadlines, anniversaries and intermediate milestones, with personal widgets and optional reminders.</p>
+      <p class="subtitle">Local moments, personal widgets and optional synchronization with your own Google Drive.</p>
       <div class="meta">
-        <div><strong>Effective date</strong>September 11, 2026</div>
+        <div><strong>Effective date</strong>September 11, 2026 · Version 1.2.0</div>
         <div><strong>Developer</strong>Pix-Kit</div>
         <div><strong>Contact</strong><a href="mailto:niko@pix-kit.com">niko@pix-kit.com</a></div>
       </div>
@@ -189,79 +189,57 @@
 
     <section class="card">
       <h2>Summary</h2>
-      <p>Pix-Moments stores your data on your Android device. It has no account system, advertising, analytics, behavioural tracking, remote crash reporting, or Pix-Kit cloud service. The app does not request Android’s Internet permission and does not send your Moments or photos to Pix-Kit.</p>
+      <p>Pix-Moments stores your moments on your Android device. At first launch, you can connect Google Drive or continue using only this phone. Connecting Drive is optional. Local mode does not initiate Drive requests. There is no Pix-Moments account to create and no Pix-Kit cloud service that receives your moments or photos.</p><p>This policy covers version 1.2.0 and later. Version 1.1.0 remains local and has no direct Google Drive integration. Pix-Moments has no advertising, analytics, behavioural tracking or remote crash-reporting service.</p>
     </section>
 
     <section class="card">
-      <h2>1. Information Pix-Moments handles</h2>
-      <p>Depending on the features you choose, the app stores:</p>
-      <ul>
-        <li>Moment titles, dates, types, descriptions, emojis, categories, tags, colours, appearance settings, order, pinned status, and archive status.</li>
-        <li>Photos you select through Android’s photo picker, copied into the app’s private storage.</li>
-        <li>Milestone descriptions, fixed dates or day offsets, notification preferences and times.</li>
-        <li>Reminder dates, offsets and times, snooze dates, completion records, and reset history when enabled.</li>
-        <li>Theme, device-colour and language preferences, and your twelve most recently saved colours.</li>
-        <li>Local random identifiers, edit revisions, widget-to-Moment associations, and short-lived notification delivery records used to avoid duplicate reminders.</li>
-      </ul>
-      <p>These identifiers are used locally for app behaviour. They are not advertising identifiers and are not transmitted to Pix-Kit.</p>
+      <h2>1. Information the app handles</h2>
+      <ul><li>Moment titles, dates, types, descriptions, emojis, categories, tags, colours, styles, card sizes and positions, archive and pinned status.</li><li>Selected photo copies, milestones, reminder preferences, completion records, snooze dates and optional reset history.</li><li>Theme, language, recent colours and category preferences.</li><li>Random record identifiers, edit revisions, widget associations and notification delivery records used for app functionality.</li><li>If Drive is connected: the selected Google account email and Drive user identifier, an installation identifier, synchronization status, timestamps and deletion markers.</li></ul><p>Identifiers support editing, synchronization and duplicate prevention. They are not advertising identifiers and are not sent to a Pix-Kit server.</p>
     </section>
 
     <section class="card">
       <h2>2. Local storage and photos</h2>
-      <p>Moments and settings are kept in the app’s private Android database. Selected photos are stored as resized copies in app-private storage. Pix-Moments does not modify or delete the original photos in your gallery.</p>
-      <p>Android cloud backup and device-transfer backup are disabled for app data. Moving to a different device requires an export and import that you request. The app does not apply a separate encryption password to its database or exported ZIP backups.</p>
+      <p>Moments and settings are kept in the app’s private Android database. Photos selected with Android’s photo picker are resized and copied into app-private storage. Original gallery photos are not modified or deleted. Broad access to your photo library or storage is not requested.</p><p>Android system cloud backup and automatic device-transfer backup are disabled. You can move data through optional Drive synchronization or a manual export and import. The local database and exported ZIP files do not have a separate encryption password.</p>
     </section>
 
     <section class="card">
-      <h2>3. Notifications and widgets</h2>
-      <p>Notifications are optional. On Android versions that require notification permission, the app asks before sending reminders. You can deny or revoke permission in Android settings. Milestone notifications include the description you entered for that step.</p>
-      <p>Widgets display the selected Moment’s emoji, title, counter and appearance on your home screen. Notifications may appear on your lock screen according to Android settings. Consider what other people can see on your device when adding personal information.</p>
-      <p>Android background scheduling is used to refresh widgets and deliver reminders, including after a restart or a time change. Battery restrictions, sleep and force-stop can delay this work. No exact-time alarm guarantee is made.</p>
+      <h2>3. Optional Google Drive synchronization</h2>
+      <p>When you choose <strong>Connect Google Drive</strong>, Google presents account selection and authorization. Pix-Moments requests access only to its application-data space, using the <code>drive.appdata</code> permission. It does not request access to all files in your Drive. This app-data space is private to the application and is not displayed as a normal folder in the Drive file browser.</p><p>After you authorize it, the app uploads and downloads moments, descriptions, selected photo copies, milestones, reminders, history, categories, recent colours and card layouts directly between your device and your Google Drive. Changes queue automatically, with retries when a connection becomes available. Opening the app and periodic background work also check for changes from other connected devices. Android battery restrictions and force-stop can delay synchronization.</p><p>The selected account email and identifier are retained on the phone to bind requests to the correct account. Short-lived access tokens authenticate requests; the app does not export or log these tokens and does not receive your Google password. Google manages authorization and processes service connections under its own <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://www.google.com/drive/terms-of-service/">Drive terms</a>. Google storage limits apply.</p><p>Google authorization and Drive services may process account, device, network and service-operation information under Google’s policies. Pix-Kit does not receive the contents of your Drive synchronization space.</p>
     </section>
 
     <section class="card">
-      <h2>4. Export, import and selected providers</h2>
-      <p>Exporting creates a ZIP containing your Moments, descriptions, milestones, history, preferences and referenced photo copies. The backup is not password-protected. You choose its destination using Android’s document picker.</p>
-      <p>A destination may be local storage or a cloud document provider installed on your device. That provider may upload and process your exported file under its own terms and privacy policy. Pix-Moments does not receive your provider password and does not connect directly to the provider over the Internet.</p>
-      <p>Import validates the selected backup and adds its Moments. Existing Moments are preserved; matching identifiers become separate copies. Supported appearance and language preferences from the backup are restored.</p>
+      <h2>4. Use of Google API data</h2>
+      <p>Data obtained through Google APIs is used to provide synchronization and restoration, including account binding and conflict handling. It is not used for advertising, profiling, sale or unrelated purposes. We follow the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p><p>Synchronization uses a separate snapshot for each installation. Independent new moments are retained; competing edits resolve using modification times. Deletion markers stop old or offline copies from reintroducing a deleted moment. These controls reduce conflicts but do not guarantee that every simultaneous edit can be retained.</p>
     </section>
 
     <section class="card">
-      <h2>5. Data sharing and external links</h2>
-      <p>Pix-Kit does not sell, rent, or use Pix-Moments data for advertising. No Moment data is sent to Pix-Kit. Data can leave app-private storage when you export a backup or when Android displays content through a widget or notification.</p>
-      <p>Opening this privacy policy launches your browser. Your browser, network and the website’s hosting provider handle that connection under their own practices. Visiting the policy does not upload your Moments or photos.</p>
+      <h2>5. Notifications and widgets</h2>
+      <p>Notifications are optional and require Android permission where applicable. You can deny or revoke it in Android settings. Milestone notifications contain the description you entered. Widgets and notifications can reveal content to anyone who can see your home or lock screen, depending on Android settings.</p><p>Background work refreshes counters and delivers reminders, including after a restart or a time change. Exact delivery time is not guaranteed. Deleting a moment clears its widget content and cancels its notifications; Android’s launcher controls removal of the widget’s home-screen slot.</p>
     </section>
 
     <section class="card">
-      <h2>6. Retention and deletion</h2>
-      <ul>
-        <li>Deleting a Moment removes its database record, milestones and history. Its notifications are cancelled and its content is cleared from associated widgets. Android’s launcher controls removal of the widget’s home-screen slot.</li>
-        <li>Archiving keeps the Moment in the app and pauses its notifications. It does not delete the Moment.</li>
-        <li>Photo copies no longer referenced by any Moment are eligible for removal during background maintenance after seven days. Android may delay that maintenance. Original gallery photos are unaffected.</li>
-        <li>Notification delivery records are pruned during maintenance after seven days.</li>
-        <li>Clearing app data or uninstalling removes the app’s private database and photo copies.</li>
-        <li>Exported backups remain at the destination you chose. Delete those copies yourself or through the selected provider.</li>
-      </ul>
+      <h2>6. Manual exports and imports</h2>
+      <p>A manual export creates an unencrypted ZIP containing moments, notes, milestones, history, supported preferences and referenced photos. Google account details, authorization tokens, widget host IDs and notification delivery receipts are excluded. You choose the destination with Android’s document picker.</p><p>A selected document provider may upload that file under its own terms. Exported files remain under your control and must be deleted separately. Import validates the archive and adds its moments; matching or previously deleted identifiers become separate copies, preserving existing moments.</p>
     </section>
 
     <section class="card">
-      <h2>7. Security</h2>
-      <p>App-private storage, bounded input validation and transactional database writes help protect local data and reduce accidental corruption. No storage system can be guaranteed completely secure. Protect access to your device and keep exported backups in a destination you trust.</p>
+      <h2>7. Retention, disconnection and deletion</h2>
+      <ul><li>Deleting a moment removes its local record, milestones and history. When Drive is connected, a deletion marker prevents it from appearing in synchronized app views.</li><li>Older device snapshots and unreferenced photo files can remain in Drive until those snapshots are updated or you clear the app’s Drive data. Offline devices may retain local copies until they synchronize.</li><li><strong>Settings → Google Drive → Disconnect</strong> stops this phone’s automatic synchronization. It preserves local moments and existing Drive copies. You can separately revoke Google authorization through your <a href="https://myaccount.google.com/connections">Google account connections</a>.</li><li><strong>Delete Drive data</strong> removes the app-owned Drive snapshots and photos from the selected account and disconnects this phone. Local moments remain. Disconnect other devices first so they do not upload their retained copies again.</li><li>Archiving retains a moment and pauses its notifications.</li><li>Unreferenced local photo copies become eligible for removal during maintenance after seven days. Android may delay maintenance. Original gallery photos are unaffected.</li><li>Notification delivery records are pruned after seven days during maintenance. Deletion markers are retained to prevent old copies from reappearing.</li><li>Uninstalling or clearing Android app data removes local storage, but does not remove Drive data or exported ZIP files.</li></ul>
     </section>
 
     <section class="card">
-      <h2>8. Children’s privacy</h2>
-      <p>Pix-Moments is a general date-tracking utility. Pix-Kit does not knowingly collect personal information from children or adults through the app.</p>
+      <h2>8. Security and sharing</h2>
+      <p>Network transfers to Google use HTTPS. Private Android storage, input validation, account binding and transactional writes help protect app data. Pix-Moments does not provide separate end-to-end encryption for Drive files. No system can guarantee complete security.</p><p>Pix-Kit does not sell or rent your app data. Data can leave the phone through the Drive synchronization or export that you choose. Opening this policy uses your browser and the website host’s network services; it does not upload your moments. If you contact support, we receive only the information you choose to send.</p>
     </section>
 
     <section class="card">
-      <h2>9. Changes to this policy</h2>
-      <p>This policy may change when the app’s features or data practices change. The effective date above identifies this published version. Applicable store privacy disclosures will need to reflect any changes to data practices.</p>
+      <h2>9. Children and policy changes</h2>
+      <p>Pix-Moments is a general date-tracking utility. Google account and Drive use are subject to Google’s eligibility requirements and policies. Pix-Kit does not knowingly collect children’s moment data on its own servers.</p><p>We update this policy when features or data practices change. The effective version above identifies these practices. Store disclosures must reflect the versions currently distributed.</p>
     </section>
 
     <section class="card">
       <h2>10. Contact</h2>
-      <p>For questions about Pix-Moments or this privacy policy, contact <a href="mailto:niko@pix-kit.com">niko@pix-kit.com</a>.</p>
+      <p>For privacy questions or assistance deleting Pix-Moments data, contact <a href="mailto:niko@pix-kit.com">niko@pix-kit.com</a>.</p>
     </section>
 
     <p class="footer">© 2026 Pix-Kit · Pix-Moments</p>
